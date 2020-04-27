@@ -1,0 +1,62 @@
+<'the student appeared to sleep'
+{ :'np_vp__s:the student appeared to sleep'
+    s(
+        mood: indicative(
+            tense: tense),
+        vsem: 'mgsat(v_sem)')
+    { :'det_n__np:the student'
+        np(
+            nsem: $2 = student)
+        { :'lexicon:the'
+            det
+        }
+        { :'lexicon:student'
+            n(
+                nsem: $2)
+        }
+    }
+    { :'v_appear_inf_clause__vp:appeared to sleep'
+        vp(
+            mood: indicative(
+                tense: tense),
+            vsem: v_sem(
+                subcat: [np(
+                    nsem: $2), inf_clause(
+                    mood: infinitive,
+                    vsem: $7 = appear(
+                        appear_theme: $4 = sleep(
+                            experiencer: $2,
+                            subcat: [np(
+                                nsem: $2)],
+                            vtense: present),
+                        subcat: [np(
+                            nsem: $2), inf_clause(
+                            mood: infinitive,
+                            vsem: $4)],
+                        vtense: $5 = past))],
+                vtense: $5))
+        { :'lexicon:appeared'
+            v(
+                vsem: $7)
+        }
+        { :'toinf_v__inf_clause:to sleep'
+            inf_clause(
+                mood: infinitive,
+                vsem: v_sem(
+                    subcat: [np(
+                        nsem: $2), inf_clause(
+                        mood: infinitive,
+                        vsem: $4)],
+                    vtense: present))
+            { :'lexicon:to'
+                toinf
+            }
+            { :'lexicon:sleep'
+                v(
+                    vsem: $4)
+            }
+        }
+    }
+}
+>
+
